@@ -10,13 +10,13 @@ import Login from "./pages/login/Login";
 function App() {
   return (
     <Routes>
-    <Route>
-      <Route path="/" element={<LandingPage/>} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/homepage" element={<HomePage />} />
-      <Route path="/login" element={<Login/>} />
-    </Route>
-  </Routes>
+      <Route>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/homepage" element={<HomePage />} />
+        <Route path="/login" element={<Login />} />
+      </Route>
+    </Routes>
   );
 }
 
