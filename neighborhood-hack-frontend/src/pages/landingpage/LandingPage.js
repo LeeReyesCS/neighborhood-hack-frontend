@@ -1,8 +1,11 @@
 import React from 'react'
+import NewBoardForm from '../../newBoard/NewBoardForm'; 
 
 const LandingPage = () => {
   return (
-    <div>LandingPage</div>
+    <div>
+    <NewBoardForm />
+    </div>
   )
 }
 
