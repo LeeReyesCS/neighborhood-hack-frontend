@@ -1,16 +1,14 @@
-import React from 'react';
-import NavBar from '../../components/navbar/NavBar.js';
+import React from "react";
+import NavBar from "../../components/navBar/NavBar.Js";
 
 const HomePage = () => {
   return (
+    //  <NavBar/>
     <div>
-    <NavBar/>
-    <h1>
-   dummy change this is the home page
-   
-   </h1>
-   </div>
-  )
-}
+      <h1>Homepage</h1>
+      <h2>Hackathon Proj</h2>
+    </div>
+  );
+};
 
 export default HomePage;

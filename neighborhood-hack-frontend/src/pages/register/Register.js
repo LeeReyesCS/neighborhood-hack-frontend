@@ -1,10 +1,13 @@
 import React from "react";
+import "./Register.css";
+import LandingPic from "../../images/Landing_page.jpg";
+import { Link } from "react-router-dom";
 
 const Register = () => {
-
   // validate zipcode exists with zipcode api
   return (
     <div className="reg-page">
+      <img className="landing_pic" src={LandingPic} alt="" />
       <div className="reg-container">
         <h1>Register</h1>
         <ul className="reg-list-items">
@@ -36,6 +39,10 @@ const Register = () => {
             <label>Skills</label>
             <input type="text" required />
           </li>
+          <Link to="/login">
+            {" "}
+            <button className="reg-btn">Register</button>
+          </Link>
         </ul>
       </div>
     </div>
