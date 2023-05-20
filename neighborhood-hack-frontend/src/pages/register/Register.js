@@ -70,32 +70,32 @@ const Register = () => {
         <h1>Register</h1>
         <ul className="reg-list-items">
           <li className="reg-list-item">
-            <label>Name</label>
+            {/* <label>Name</label> */}
             <input type="text" placeholder="Enter Your Name" name="name" value={name} required onChange={(event)=>onInputChange(event)} />
           </li>
           <li className="reg-list-item">
-            <label>Password</label>
+            {/* <label>Password</label> */}
             <input type="password" placeholder="Enter Your Password" name="password" value={password} required onChange={(event)=>onInputChange(event)} />
           </li>
           <li className="reg-list-item">
-            <label>ZipCode</label>
+            {/* <label>ZipCode</label> */}
             <input type="text" placeholder="Enter your ZipCode" name="zipCode" required value={zipCode} onChange={(event)=>onInputChange(event)} />
           </li>
           <li className="reg-list-item">
-            <label>Email</label>
+            {/* {/* <label>Email</label> */}
             <input type="email" placeholder="Enter your Email" name="email" required value={email} onChange={(event)=>onInputChange(event)}  />
           </li>
           <li className="reg-list-item">
-            <label>Phone</label>
+            {/* {/* <label>Phone</label> */}
             <input type="tel" placeholder="Enter your Phone" name="phone" required value={phone} onChange={(event)=>onInputChange(event)} />
           </li>
           <li className="reg-list-item">
-            <label>Services</label>
-            <input type="text" required value={services} name="services" onChange={(event)=>onInputChange(event)} />
+            {/* {/* <label>Services</label> */}
+            <input type="text" required placeholder="Type of service" value={services} name="services" onChange={(event)=>onInputChange(event)} />
           </li>
           <li className="reg-list-item">
-            <label>Skills</label>
-            <input type="text" required value={skills} name="skills" onChange={(event)=>onInputChange(event)}  />
+            {/* {/* <label>Skills</label> */}
+            <input type="text" required placeholder="Add your skills" value={skills} name="skills" onChange={(event)=>onInputChange(event)}  />
           </li>
           <Link to="/login">
             {" "}
