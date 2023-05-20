@@ -1,10 +1,10 @@
 import React from 'react';
-import Navigation from '../../components/navBar/NavBar.js';
+import NavBar from '../../components/navbar/NavBar.js';
 
 const HomePage = () => {
   return (
     <div>
-    <Navigation/>
+    <NavBar/>
     <h1>
    dummy change this is the home page
    
