@@ -1,9 +1,50 @@
 import React from "react";
 import "./Register.css";
 import LandingPic from "../../images/Landing_page.jpg";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import Cookies from 'universal-cookie';
+import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 const Register = () => {
+  const cookies = new Cookies();
+  const navigate = useNavigate();
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+    zipCode:"",
+    phone:"",
+    services:[],
+    skills:[]
+  });
+
+  const { name, email, password, zipCode, phone, services, skills } = user;
+
+  const onInputChange = (event) => {
+    setUser({ ...user, [event.target.name]: event.target.value });
+  };
+
+  const registerUser = async (userData) => {
+    try {
+      const response = await axios.post('http://localhost:5000/neighbors/register', userData);
+      const token = response.data.token;
+      const expirationDate = new Date(Date.now() + 60 * 60 * 1000); // 1 hour from now
+      cookies.set('token', token, { path: '/', expires: expirationDate });      
+      console.log(token);
+    } catch (error) {
+      // Handle any error that occurred during the API call
+      console.error(error);
+    }
+  };
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    await registerUser(user);
+    navigate('/homepage')
+  }
+  
   // validate zipcode exists with zipcode api
   return (
     <div className="reg-page">
