@@ -5,7 +5,7 @@ const PrivateRoute = ({ children, jwt }) => {
   const navigate = useNavigate()
 
   useEffect(()=>navigate(),[navigate])
-  return jwt ? children :  navigate("/signin");
+  return jwt ? children :  navigate("/login");
 
 }
 
