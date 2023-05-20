@@ -1,13 +1,25 @@
 import "./App.css";
-
+import { Routes, Route } from "react-router-dom";
 //importing components
-import Register from "./components/Register";
+// import Register from "./components/Register";
+// import LandingPage from "./pages/landingpage/LandingPage";
+// import Login from "./pages/login/Login"
+// import HomePage from "./pages/homepage/HomePage"
+import Register from "./pages/register/Register";
+import HomePage from "./pages/homepage/HomePage";
+import LandingPage from "./pages/landingpage/LandingPage";
+import Login from "./pages/login/Login";
 
 function App() {
   return (
-    <div className="App">
-      <Register />
-    </div>
+    <Routes>
+    <Route>
+      <Route path="/" element={<LandingPage/>} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/homepage" element={<HomePage />} />
+      <Route path="/login" element={<Login/>} />
+    </Route>
+  </Routes>
   );
 }
 
