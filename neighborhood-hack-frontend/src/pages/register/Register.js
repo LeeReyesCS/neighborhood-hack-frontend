@@ -51,6 +51,31 @@ const Register = () => {
     }
   };
 
+  const handleKeySkillsPress = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      if (event.target.value.trim() !== "") {
+        setUser({
+          ...user,
+          skills: [...skills, event.target.value.trim()]
+        });
+        event.target.value = ""; // Clear the input field after appending
+      }
+    }
+  };
+  const handleKeyServicePress = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      if (event.target.value.trim() !== "") {
+        setUser({
+          ...user,
+          services: [...services, event.target.value.trim()]
+        });
+        event.target.value = ""; // Clear the input field after appending
+      }
+    }
+  };
+
   const onSubmit = async (event) => {
     event.preventDefault();
     const isValidZipCode = await validateZipCode(zipCode);
@@ -90,12 +115,22 @@ const Register = () => {
             <input type="tel" placeholder="Enter your Phone" name="phone" required value={phone} onChange={(event)=>onInputChange(event)} />
           </li>
           <li className="reg-list-item">
-            {/* {/* <label>Services</label> */}
-            <input type="text" required placeholder="Type of service" value={services} name="services" onChange={(event)=>onInputChange(event)} />
+            <label>Services</label>
+            <input type="text" required name="services" onKeyDown={handleKeyServicePress} />
+            <ul>
+              {services.map((service, index) => (
+                <li key={index}>{service}</li>
+              ))}
+            </ul>
           </li>
           <li className="reg-list-item">
-            {/* {/* <label>Skills</label> */}
-            <input type="text" required placeholder="Add your skills" value={skills} name="skills" onChange={(event)=>onInputChange(event)}  />
+            <label>Skills</label>
+            <input type="text" required name="skills"  onKeyDown={handleKeySkillsPress}  />
+            <ul>
+              {skills.map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
           </li>
           <Link to="/login">
             {" "}
