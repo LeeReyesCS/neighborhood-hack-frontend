@@ -1,5 +1,5 @@
 import * as React from "react";
-import { NavLink } from "react-router-dom";
+import NavLink  from "react-router-dom";
 import Button from "@mui/material/Button";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import Grow from "@mui/material/Grow";
@@ -51,6 +51,11 @@ export default function NavBar() {
     <div>
       Is this the issue
       {/* <NavLink to="/neworderform"> New Order Form </NavLink> */}
+      <Button>This is a button</Button>
+      <Button>This is a button</Button>
+      <Button>This is a button</Button>
+      <Button>This is a button</Button>
+      <Button>This is a button</Button>
     </div>
   );
 }
