@@ -98,39 +98,49 @@ const Register = () => {
           <ul className="reg-list-items">
             <li className="reg-list-item">
               {/* <label>Name</label> */}
-              <input type="text" placeholder="Enter Your Name" required />
+              <input type="text" placeholder="Enter Your Name" name="name" required value={name} onChange={(event)=>onInputChange(event)} />
             </li>
             <li className="reg-list-item">
               {/* <label>Password</label> */}
               <input
                 type="password"
                 placeholder="Enter Your Password"
-                required
+                required name="password" value={password} onChange={(event)=>onInputChange(event)}
               />
             </li>
             <li className="reg-list-item">
               {/* <label>ZipCode</label> */}
-              <input type="text" placeholder="Enter your ZipCode" required />
+              <input type="text" placeholder="Enter your ZipCode" name="zipCode" required value={zipCode} onChange={(event)=>onInputChange(event)} />
             </li>
             <li className="reg-list-item">
               {/* <label>Email</label> */}
-              <input type="email" placeholder="Enter your Email" required />
+              <input type="email" placeholder="Enter your Email" name="email" required value={email} onChange={(event)=>onInputChange(event)}/>
             </li>
             <li className="reg-list-item">
               {/* <label>Phone</label> */}
-              <input type="tel" placeholder="Enter your Phone" required />
+              <input type="tel" placeholder="Enter your Phone" name="phone" required value={phone} onChange={(event)=>onInputChange(event)} />
             </li>
             <li className="reg-list-item">
               {/* <label>Services</label> */}
-              <input type="text" required />
-            </li>
-            <li className="reg-list-item">
-              {/* <label>Skills</label> */}
-              <input type="text" required />
-            </li>
-            <Link to="/login">
-              {" "}
-              <button className="reg-btn">Register</button>
+              <input type="text" required name="services" onKeyDown={handleKeyServicePress} />
+            <ul>
+              {services.map((service, index) => (
+                <li key={index}>{service}</li>
+              ))}
+            </ul>
+          </li>
+          <li className="reg-list-item">
+            {/* <label>Skills</label> */}
+            <input type="text" required name="skills"  onKeyDown={handleKeySkillsPress}  />
+            <ul>
+              {skills.map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
+          </li>
+          <Link to="/login">
+            {" "}
+              <button className="reg-btn" onSubmit={onSubmit}>Register</button>
             </Link>
           </ul>
         </div>

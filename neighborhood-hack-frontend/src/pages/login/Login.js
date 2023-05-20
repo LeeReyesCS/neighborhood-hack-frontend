@@ -45,33 +45,27 @@ const Login = () => {
   }
 
   return (
-    <>
-      <Nav />
-      <div>
-        <img className="landing_pic" src={LandingPic} alt="" />
-        <div className="logIn-container">
-          <h1>Log In</h1>
-          <ul className="logIn-list-items">
-            <li className="logIn-list-item">
-              {/* <label>Email</label> */}
-              <input type="email" placeholder="Enter Your Email" required />
-            </li>
-            <li className="logIn-list-item">
-              {/* <label>Password</label> */}
-              <input
-                type="password"
-                placeholder="Enter Your Password"
-                required
-              />
-            </li>
-            <Link to="/homepage">
-              {" "}
-              <button className="logIn-btn">Log In</button>
-            </Link>
-          </ul>
-        </div>
+    <div>
+      < Nav />
+      <cimg className="landing_pic" src={LandingPic} alt="" />
+      <div className="logIn-container">
+        <h1>Log In</h1>
+        <ul className="logIn-list-items">
+          <li className="logIn-list-item">
+            {/* <label>Email</label> */}
+            <input type="email" placeholder="Enter Your Email" required name="email" value={email} onChange={(event)=>onInputChange(event)}/>
+          </li>
+          <li className="logIn-list-item">
+            {/* <label>Password</label> */}
+            <input type="password" placeholder="Enter Your Password" required name="password" value={password} onChange={(event)=>onInputChange(event)}/>
+          </li>
+          <Link to="/homepage">
+            {" "}
+            <button className="logIn-btn" onSubmit={onSubmit}>Log In</button>
+          </Link>
+        </ul>
       </div>
-    </>
+      </div>
   );
 };
 
