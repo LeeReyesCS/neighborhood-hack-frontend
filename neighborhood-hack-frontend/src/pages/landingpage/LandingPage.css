@@ -1,12 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Russo+One&display=swap");
+
 .landing_pic {
   object-fit: cover;
   width: 100vw;
   height: 100vh;
+  opacity: 0.3;
 }
 
 .landingPage-header {
   position: absolute;
-  top: 35%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -36,6 +39,18 @@
   cursor: pointer;
   border-radius: 5px;
   opacity: 0.6;
+}
+
+.landingPage-text {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 16px;
+  text-align: center;
+  font-family: "Carter One", cursive;
+  font-family: "Russo One", sans-serif;
 }
 
 .landingContainer .btn-reg-enter:hover {

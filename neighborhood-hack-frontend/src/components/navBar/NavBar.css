@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@200&family=Carter+One&display=swap");
+
+.navbar {
+  /* position: absolute; */
+}
+
+.navbar nav h1 {
+  padding-left: 20px;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-link {
+  list-style-type: none;
+  margin: 20px;
+  color: black;
+}
+
+.navbar-link {
+  text-decoration: none;
+  font-family: "Alumni Sans", sans-serif;
+  font-family: "Carter One", cursive;
+}
+
+.navbar-link:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}

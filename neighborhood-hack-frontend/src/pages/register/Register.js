@@ -5,7 +5,7 @@ import { useState } from "react";
 import Cookies from 'universal-cookie';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-
+import Nav from "../../components/navBar/Nav";
 
 const Register = () => {
   const cookies = new Cookies();
@@ -89,56 +89,53 @@ const Register = () => {
   
   // validate zipcode exists with zipcode api
   return (
-    <div className="reg-page">
-      <img className="landing_pic" src={LandingPic} alt="" />
-      <div className="reg-container">
-        <h1>Register</h1>
-        <ul className="reg-list-items">
-          <li className="reg-list-item">
-            {/* <label>Name</label> */}
-            <input type="text" placeholder="Enter Your Name" name="name" value={name} required onChange={(event)=>onInputChange(event)} />
-          </li>
-          <li className="reg-list-item">
-            {/* <label>Password</label> */}
-            <input type="password" placeholder="Enter Your Password" name="password" value={password} required onChange={(event)=>onInputChange(event)} />
-          </li>
-          <li className="reg-list-item">
-            {/* <label>ZipCode</label> */}
-            <input type="text" placeholder="Enter your ZipCode" name="zipCode" required value={zipCode} onChange={(event)=>onInputChange(event)} />
-          </li>
-          <li className="reg-list-item">
-            {/* {/* <label>Email</label> */}
-            <input type="email" placeholder="Enter your Email" name="email" required value={email} onChange={(event)=>onInputChange(event)}  />
-          </li>
-          <li className="reg-list-item">
-            {/* {/* <label>Phone</label> */}
-            <input type="tel" placeholder="Enter your Phone" name="phone" required value={phone} onChange={(event)=>onInputChange(event)} />
-          </li>
-          <li className="reg-list-item">
-            <label>Services</label>
-            <input type="text" required name="services" onKeyDown={handleKeyServicePress} />
-            <ul>
-              {services.map((service, index) => (
-                <li key={index}>{service}</li>
-              ))}
-            </ul>
-          </li>
-          <li className="reg-list-item">
-            <label>Skills</label>
-            <input type="text" required name="skills"  onKeyDown={handleKeySkillsPress}  />
-            <ul>
-              {skills.map((skill, index) => (
-                <li key={index}>{skill}</li>
-              ))}
-            </ul>
-          </li>
-          <Link to="/login">
-            {" "}
-            <button className="reg-btn" onSubmit={onSubmit}>Register</button>
-          </Link>
-        </ul>
+    <>
+      <Nav />
+      <div className="reg-page">
+        <img className="landing_pic" src={LandingPic} alt="" />
+        <div className="reg-container">
+          <h1>Register</h1>
+          <ul className="reg-list-items">
+            <li className="reg-list-item">
+              {/* <label>Name</label> */}
+              <input type="text" placeholder="Enter Your Name" required />
+            </li>
+            <li className="reg-list-item">
+              {/* <label>Password</label> */}
+              <input
+                type="password"
+                placeholder="Enter Your Password"
+                required
+              />
+            </li>
+            <li className="reg-list-item">
+              {/* <label>ZipCode</label> */}
+              <input type="text" placeholder="Enter your ZipCode" required />
+            </li>
+            <li className="reg-list-item">
+              {/* <label>Email</label> */}
+              <input type="email" placeholder="Enter your Email" required />
+            </li>
+            <li className="reg-list-item">
+              {/* <label>Phone</label> */}
+              <input type="tel" placeholder="Enter your Phone" required />
+            </li>
+            <li className="reg-list-item">
+              {/* <label>Services</label> */}
+              <input type="text" required />
+            </li>
+            <li className="reg-list-item">
+              {/* <label>Skills</label> */}
+              <input type="text" required />
+            </li>
+            <Link to="/login">
+              {" "}
+              <button className="reg-btn">Register</button>
+            </Link>
+          </ul>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
