@@ -48,63 +48,9 @@ export default function NavBar() {
   }, [open]);
 
   return (
-    <>
-      <Stack direction="row" spacing={2}>
-        <div>
-          <Button
-            ref={anchorRef}
-            id="composition-button"
-            aria-controls={open ? "composition-menu" : undefined}
-            aria-expanded={open ? "true" : undefined}
-            aria-haspopup="true"
-            onClick={handleToggle}
-          >
-            <MenuIcon fontSize="large" />
-          </Button>
-          <Popper
-            open={open}
-            anchorEl={anchorRef.current}
-            role={undefined}
-            placement="bottom-start"
-            transition
-            disablePortal
-          >
-            {({ TransitionProps, placement }) => (
-              <Grow
-                {...TransitionProps}
-                style={{
-                  transformOrigin:
-                    placement === "bottom-start" ? "left top" : "left bottom",
-                }}
-              >
-                <Paper>
-                  <ClickAwayListener onClickAway={handleClose}>
-                    <MenuList
-                      autoFocusItem={open}
-                      id="composition-menu"
-                      aria-labelledby="composition-button"
-                      onKeyDown={handleListKeyDown}
-                    >
-
-                      <MenuItem onClick={handleClose}>
-                        <NavLink to="/register"> Register </NavLink>
-                      </MenuItem>
-                    </MenuList>
-                  </ClickAwayListener>
-                </Paper>
-              </Grow>
-            )}
-          </Popper>
-          <div className="flex">
-            
-              {/* <a href="/">
-                <img alt="Recycle, Dont cry" />
-              </a> */}
-            </div>
-        </div>
-          
-      </Stack>
+    <div>
+      Is this the issue
       {/* <NavLink to="/neworderform"> New Order Form </NavLink> */}
-    </>
+    </div>
   );
 }

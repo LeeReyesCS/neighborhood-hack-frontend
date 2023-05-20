@@ -1,10 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 //importing components
-// import Register from "./components/Register";
-// import LandingPage from "./pages/landingpage/LandingPage";
-// import Login from "./pages/login/Login"
-// import HomePage from "./pages/homepage/HomePage"
+
 import Register from "./pages/register/Register";
 import HomePage from "./pages/homepage/HomePage";
 import LandingPage from "./pages/landingpage/LandingPage";
