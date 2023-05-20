@@ -6,7 +6,7 @@ import "./NewBoardForm.css";
 // Is there a way to get the neighbor's name (using neihgbor_id) to show up with the board? //
 function NewBoardForm() {
   const [board, setBoard] = useState({
-    title: "",
+    board_title: "",
     looking_for: "",
     timestamp: "",
     message: ""
@@ -28,7 +28,7 @@ function NewBoardForm() {
     try {
       // added try-catch block for error handling
       const response = await axios.post(
-        "http://localhost:5000/board",
+        "http://localhost:5000/boards",
         board
       );
       console.log(response);
@@ -76,19 +76,19 @@ function NewBoardForm() {
           <span className="highlight"></span>
           <span className="bar"></span>
           <input
-            type="text"
-            id="timestamp"
-            name="timestamp"
-            value={timestamp}
-            onChange={(event) => onInputChange(event)}
-          />
+                type="text"
+                id="timestamp"
+                name="timestamp"
+                value={timestamp}
+                onChange={(event) => onInputChange(event)}
+              />
           <label htmlFor="timestamp">Timestamp:</label>
         </div>
 
         <div className="group">
           <input
             type="text"
-            id="mesage"
+            id="message"
             name="message"
             value={message}
             onChange={(event) => onInputChange(event)}

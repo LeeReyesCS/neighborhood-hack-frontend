@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from "../../components/navBar/Nav";
+import NewBoardForm from '../../newBoard/NewBoardForm';
 
 const HomePage = () => {
   return (
@@ -7,7 +8,7 @@ const HomePage = () => {
     <div>
       <Nav/>
       <h1>Homepage</h1>
-      <h2>Hackathon Proj</h2>
+      <NewBoardForm />
     </div>
   );
 };
