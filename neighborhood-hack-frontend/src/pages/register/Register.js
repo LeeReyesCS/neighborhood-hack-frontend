@@ -39,10 +39,27 @@ const Register = () => {
     }
   };
 
+  const validateZipCode = async (zipcode) => {
+    try {
+      const response = await axios.get(`https://api.zipcodeapi.com/rest/API_KEY_HERE/info.json/${zipcode}/degrees`);
+      const isValidZipCode = response.data.city !== null;
+      return isValidZipCode;
+    } catch (error) {
+      // Handle any error that occurred during the API call
+      console.error(error);
+      return false;
+    }
+  };
+
   const onSubmit = async (event) => {
     event.preventDefault();
-    await registerUser(user);
-    navigate('/homepage')
+    const isValidZipCode = await validateZipCode(zipCode);
+    if (isValidZipCode) {
+      await registerUser(user);
+      navigate('/homepage');
+    } else {
+      console.log('Invalid ZipCode');
+    }
   }
   
   // validate zipcode exists with zipcode api
