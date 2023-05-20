@@ -6,7 +6,7 @@ const HomePage = () => {
     <div>
     <Navigation/>
     <h1>
-    this is the home page
+   dummy change this is the home page
    
    </h1>
    </div>
