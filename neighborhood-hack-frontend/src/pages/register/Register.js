@@ -131,7 +131,7 @@ const Register = () => {
             </li>
             <li className="reg-list-item">
               {/* <label>Services</label> */}
-              <input type="text" required name="services" onKeyDown={handleKeyServicePress} />
+              <input type="text" placeholder="Type of services" required name="services" onKeyDown={handleKeyServicePress} />
             <ul>
               {services.map((service, index) => (
                 <li key={index}>{service}</li>
@@ -140,7 +140,7 @@ const Register = () => {
           </li>
           <li className="reg-list-item">
             {/* <label>Skills</label> */}
-            <input type="text" required name="skills"  onKeyDown={handleKeySkillsPress}  />
+            <input type="text" placeholder="Add your skills" required name="skills"  onKeyDown={handleKeySkillsPress}  />
             <ul>
               {skills.map((skill, index) => (
                 <li key={index}>{skill}</li>

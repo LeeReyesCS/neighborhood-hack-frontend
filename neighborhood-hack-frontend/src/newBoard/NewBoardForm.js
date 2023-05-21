@@ -3,16 +3,15 @@ import axios from "axios";
 import {Button} from "@mui/material";
 import "./NewBoardForm.css";
 
-// Is there a way to get the neighbor's name (using neihgbor_id) to show up with the board? //
 function NewBoardForm() {
   const [board, setBoard] = useState({
     board_title: "",
     looking_for: "",
-    timestamp: "",
+    timestamp: new Date().toLocaleString(),
     message: ""
   });
 
-  const { title, looking_for, timestamp, message } = board;
+  const { board_title, looking_for, timestamp, message } = board;
 
   const onInputChange = (event) => {
     setBoard({ ...board, [event.target.name]: event.target.value });
@@ -22,7 +21,7 @@ function NewBoardForm() {
     // added async keyword
     event.preventDefault();
     console.log(
-      `Title: ${title}, Looking_for: ${looking_for}, Timestamp: ${timestamp}, Message: ${message}`
+      `Title: ${board_title}, Looking_for: ${looking_for}, Timestamp: ${timestamp}, Message: ${message}`
     );
 
     try {
@@ -51,9 +50,9 @@ function NewBoardForm() {
         <div className="group">
           <input
             type="text"
-            id="title"
-            name="title"
-            value={title}
+            id="board_title"
+            name="board_title"
+            value={board_title}
             onChange={(event) => onInputChange(event)}
           />
           <label htmlFor="name">Title:</label>
@@ -74,7 +73,7 @@ function NewBoardForm() {
            <label htmlFor="looking_for">Looking:</label>
         </div>
 
-        <div className="group">
+        {/* <div className="group">
           <span className="highlight"></span>
           <span className="bar"></span>
           <input
@@ -85,7 +84,7 @@ function NewBoardForm() {
                 onChange={(event) => onInputChange(event)}
               />
           <label htmlFor="timestamp">Timestamp:</label>
-        </div>
+        </div> */}
 
         <div className="group">
           <input

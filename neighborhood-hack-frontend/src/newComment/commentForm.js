@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function CommentForm() {
+
   const [comment, setComment] = useState({
-    neighbor_id: "",
+    neighbor_id: localStorage.getItem("neighborId"),
     message: "",
-    timestamp: ""
+    timestamp: new Date().toLocaleString()
   });
 
   const { neighbor_id, message, timestamp } = comment;
@@ -24,7 +25,7 @@ function CommentForm() {
       alert("Comment submitted!");
       // Clear the form
       setComment({
-        neighbor_id: "",
+        neighbor_id: localStorage.getItem("neighborId"),
         message: "",
         timestamp: ""
       });
@@ -38,8 +39,8 @@ function CommentForm() {
     <div>
       <h2>Comment Form</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          {/* <label htmlFor="neighbor_id">Neighbor ID:</label> */}
+        {/* <div>
+          <label htmlFor="neighbor_id">Neighbor ID:</label>
           <input
             type="text"
             placeholder="Neighbor_id"
@@ -48,7 +49,7 @@ function CommentForm() {
             value={neighbor_id}
             onChange={onInputChange}
           />
-        </div>
+        </div> */}
         <div>
           {/* <label htmlFor="message">Message:</label> */}
           <input
@@ -60,8 +61,8 @@ function CommentForm() {
             onChange={onInputChange}
           />
         </div>
-        <div>
-          {/* <label htmlFor="timestamp">Timestamp:</label> */}
+        {/* <div> */}
+          {/* <label htmlFor="timestamp">Timestamp:</label>
           <input
             type="text"
             placeholder="timestamp"
@@ -70,7 +71,7 @@ function CommentForm() {
             value={timestamp}
             onChange={onInputChange}
           />
-        </div>
+        </div> */}
         <button type="submit">Submit</button>
       </form>
     </div>
