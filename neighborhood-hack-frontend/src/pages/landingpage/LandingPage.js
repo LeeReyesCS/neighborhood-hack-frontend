@@ -9,7 +9,7 @@ const LandingPage = () => {
     <>
       <Nav />
       <div>
-        <img className="landing_pic" src={LandingPic} alt="" />
+        <img className="landing_pic" src={LandingPic} alt="a group of people with arms over one another's shoulders " />
         <div className="landingPage-header">
           <h1>Savvy Swap</h1>
           <h4>Sharing Talents, Building Community</h4>
@@ -22,7 +22,10 @@ const LandingPage = () => {
             Recognizing the power of connecting individuals from diverse
             backgrounds, the app was developed with the intention of providing a
             vibrant platform where people could come together, collaborate, and
-            make a positive impact on their communities. By cultivating a sense
+            make a positive impact on their communities.</p> 
+            <br/>
+            <p>
+            By cultivating a sense
             of belonging and encouraging active participation, Savvy Swap aims
             to harness the collective knowledge, skills, and resources present
             within local communities. Moreover, by promoting sustainable
