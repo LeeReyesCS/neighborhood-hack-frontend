@@ -23,8 +23,11 @@ const Login = () => {
 
   const loginUser = async (userData) => {
     try {
-      const response = await axios.post('http://localhost:5000/neighbors/register', userData);
+      console.log("Do I get here inside login user?")
+      const response = await axios.post('http://localhost:5000/neighbors/login', userData);
       const token = response.data.token;
+      const neighborId = response.data.neighbor_id;
+      localStorage.setItem('neighborId', neighborId);
       const expirationDate = new Date(Date.now() + 60 * 60 * 1000); // 1 hour from now
       cookies.set('token', token, { path: '/', expires: expirationDate });      
       console.log(token);
@@ -47,7 +50,7 @@ const Login = () => {
   return (
     <div>
       < Nav />
-      <cimg className="landing_pic" src={LandingPic} alt="" />
+      <img className="landing_pic" src={LandingPic} alt="" />
       <div className="logIn-container">
         <h1>Log In</h1>
         <ul className="logIn-list-items">
@@ -61,7 +64,7 @@ const Login = () => {
           </li>
           <Link to="/homepage">
             {" "}
-            <button className="logIn-btn" onSubmit={onSubmit}>Log In</button>
+            <button className="logIn-btn" onClick={onSubmit}>Log In</button>
           </Link>
         </ul>
       </div>
