@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
 .logIn-container {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -17,8 +19,7 @@
 }
 
 .logIn-container h1 {
-  font-family: "Bebas Neue", sans-serif;
-  font-family: "Itim", cursive;
+  font-family: "Poppins", sans-serif;
   text-align: center;
   color: black;
 }
@@ -63,7 +64,7 @@
   cursor: pointer;
   position: relative;
   left: 220px;
-  top: 130px;
+  top: 100px;
 }
 
 .logIn-btn:hover {

@@ -68,3 +68,32 @@
   display: inline-block;
   font-size: 16px;
 }
+
+/* media queries */
+@media screen and (max-width: 768px) {
+  .landingPage-header h1 {
+    font-size: 50px;
+  }
+
+  .landingPage-header h4 {
+    font-size: 20px;
+  }
+
+  .landingPage-text {
+    top: 90%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .landingPage-header h1 {
+    font-size: 40px;
+  }
+
+  .landingPage-header h4 {
+    font-size: 15px;
+  }
+
+  .landingPage-text {
+    top: 120%;
+  }
+}
