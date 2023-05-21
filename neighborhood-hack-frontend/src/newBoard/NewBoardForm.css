@@ -8,7 +8,9 @@ margin-bottom:45px;
     margin:30px auto 0; 
     display:flex; 
     background:#FFF;
-    padding:10px 50px 50px;
+    padding:40px 50px 50px;
+    border-radius: 15px;
+    border: 2px solid teal;
     }
 
 .highlight{

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import CommentForm from '../../newComment/commentForm';
 import { Button} from '@mui/material';
+import './HomePage.css'
 
 
 const HomePage = () => {
@@ -135,7 +136,7 @@ const HomePage = () => {
         <NewBoardForm fetchBoards={fetchBoards} />
         <h1>Exisiting Boards</h1>
         {boards.map((board) => (
-          <div key={board.board_id}>
+          <div className='board-container' key={board.board_id}>
             <h3>Title: {board.board_title}</h3>
             <p>Looking For: {board.looking_for}</p>
             <p>Timestamp: {board.timestamp}</p>
@@ -157,7 +158,7 @@ const HomePage = () => {
                     </div>
                   ))}
 
-            <button onClick={() => deleteBoard(board.board_id)}>Delete</button>
+            <button className='delete-btn' onClick={() => deleteBoard(board.board_id)}>Delete</button>
           </div>
         ))}
         <Button onClick={() => getAllComments()}>See All Comments</Button>
