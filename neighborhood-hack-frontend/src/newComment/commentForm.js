@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import './commentForm.css';
 
 function CommentForm() {
 
@@ -72,7 +73,7 @@ function CommentForm() {
             onChange={onInputChange}
           />
         </div> */}
-        <button type="submit">Submit</button>
+        <button className="btn-submit" type="submit">Submit</button>
       </form>
     </div>
   );
