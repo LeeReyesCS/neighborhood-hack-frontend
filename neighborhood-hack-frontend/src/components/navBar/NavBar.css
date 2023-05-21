@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@200&family=Carter+One&display=swap");
 
-.navbar {
-  /* position: absolute; */
+.navbar img {
+  height: 85px;
+  width: 20%;
+  margin-left: 30px;
 }
 
 .navbar nav h1 {
