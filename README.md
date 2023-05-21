@@ -1,4 +1,9 @@
 # neighborhood-hack-frontend
+## Overview
+
+<img src="SavvySwapLandingPage.png" alt="Savvy Swap Landing Page" width="500">
+
+<img src="SavvySwapLogin.png" alt="Savvy Swap Login Page" width ="500">
 
 This repository contains the frontend code for the Neighborhood Hack application. Neighborhood Hack is a web application aimed at connecting individuals within a community and fostering collaboration and resource sharing. The frontend is built using modern web technologies to provide a user-friendly and interactive experience.
 
